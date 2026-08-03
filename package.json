@@ -1,0 +1,17 @@
+{
+  "name": "identity",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch server/index.ts",
+    "start": "tsx server/index.ts"
+  },
+  "dependencies": {
+    "better-auth": "^1.6.25",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "tsx": "^4.16.2"
+  }
+}
