@@ -90,6 +90,10 @@ export const auth = betterAuth({
     cookieCache: { enabled: true, maxAge: 60 },
   },
   advanced: {
+    // useSecureCookies: false — LAN http via split-DNS must work; the
+    // __Secure- prefix (auto-added when baseURL is https) makes browsers
+    // reject the cookie over plain http → LAN login broken (2026-08-04).
+    useSecureCookies: false,
     defaultCookieAttributes: {
       sameSite: 'lax',
       secure: false, // LAN http via split-DNS + CF edge TLS terminates upstream
